@@ -1,12 +1,12 @@
 
-import { output8} from "./CodeOutputs";
+import { output1, output2, output3, output4, output5, output6 } from "./CodeOutputs";
 import { Capsule } from "./components/Capsule";
 import CodeBlock from "./components/CodeBlock";
 import { Intro } from "./components/Intro";
 import { Navbar } from "./components/Navbar";
 import { Code } from "./icons/Code";
 import { File } from "./icons/File";
-import { code8 } from "./PracticalCodes";
+import { code1, code2, code3, code4, code5, code6 } from "./PracticalCodes";
 
 export default function App() {
     return (
@@ -18,7 +18,7 @@ export default function App() {
                     <Capsule
                         text="Watch Detailed Explanation on My Youtube"
                         variant="cap1"
-                        onClick={() => { window.open("https://www.youtube.com/@shubhdevs/playlists"); }}
+                        onClick={() => { window.alert("UPLOADING SOON!"); }}
                         startIcon={<File />}
                     />
                     <Capsule
@@ -33,7 +33,12 @@ export default function App() {
             <Intro />
 
             <div>
-                <CodeBlock title="IIS CODE COMING SOON! WITH EXPLANATION!" code={code8} output={output8} />
+                <CodeBlock title="1. Caesar Cipher Algorithm" code={code1} output={output1} />
+                <CodeBlock title="2. Playfair Cipher Algorithm" code={code2} output={output2} />
+                <CodeBlock title="3. Hill Cipher Algorithm" code={code3} output={output3} />
+                <CodeBlock title="4. RSA Cipher Algorithm" code={code4} output={output4} />
+                <CodeBlock title="5. Diffie-Hellman Algorithm" code={code5} output={output5} />
+                <CodeBlock title="Stay Tuned!" code={code6} output={output6} />
             </div>
 
 
