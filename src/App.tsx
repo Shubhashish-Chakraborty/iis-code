@@ -1,12 +1,12 @@
 
-import { output10a, output10b, output11, output12, output13, output14, output15, output16, output17, output18, output19, output20, output8, output9a, output9b } from "./CodeOutputs";
+import { output8} from "./CodeOutputs";
 import { Capsule } from "./components/Capsule";
 import CodeBlock from "./components/CodeBlock";
 import { Intro } from "./components/Intro";
 import { Navbar } from "./components/Navbar";
 import { Code } from "./icons/Code";
 import { File } from "./icons/File";
-import { code10a, code10b, code11, code12, code13, code14, code15, code16, code17, code18, code19, code20, code8, code9a, code9b } from "./PracticalCodes";
+import { code8 } from "./PracticalCodes";
 
 export default function App() {
     return (
@@ -16,15 +16,15 @@ export default function App() {
             <div className="sticky mt-10 md:mt-0 top-0 z-10 bg-black/10 backdrop-blur-md py-1 shadow-md">
                 <div className="mt-2 mb-4 gap-x-4 flex justify-center">
                     <Capsule
-                        text="BCE Lab Manual"
+                        text="Watch Detailed Explanation on My Youtube"
                         variant="cap1"
-                        onClick={() => { window.open("https://bcecode.vercel.app/BCE_LAB.pdf"); }}
+                        onClick={() => { window.open("https://www.youtube.com/@shubhdevs/playlists"); }}
                         startIcon={<File />}
                     />
                     <Capsule
-                        text="Try out C/C++ Code"
+                        text="Try out Python Code"
                         variant="cap2"
-                        onClick={() => { window.open("https://www.programiz.com/cpp-programming/online-compiler/"); }}
+                        onClick={() => { window.open("https://www.programiz.com/python-programming/online-compiler"); }}
                         startIcon={<Code />}
                     />
                 </div>
@@ -33,21 +33,7 @@ export default function App() {
             <Intro />
 
             <div>
-                <CodeBlock title="AIM-8: Write a Program to illustrate Arithmetic expressions" code={code8} output={output8} />
-                <CodeBlock title="AIM-9: Write a Program to illustrate Arrays. Program-9a:" code={code9a} output={output9a} />
-                <CodeBlock title="AIM-9: Write a Program to illustrate Arrays. Program-9b:" code={code9b} output={output9b} />
-                <CodeBlock title="AIM-10: Write a Program to illustrate functions. Program-10a:" code={code10a} output={output10a} />
-                <CodeBlock title="AIM-10: Write a Program to illustrate functions. Program-10b:" code={code10b} output={output10b} />
-                <CodeBlock title="AIM-11: Write a Program to illustrate constructor & Destructor:" code={code11} output={output11} />
-                <CodeBlock title="AIM-12: Write a Program to illustrate Object and classes:" code={code12} output={output12} />
-                <CodeBlock title="AIM-13: Write a Program to illustrate Operator overloading:" code={code13} output={output13} />
-                <CodeBlock title="AIM-14: Write a Program to illustrate Function overloading:" code={code14} output={output14} />
-                <CodeBlock title="AIM-15: Write a Program to illustrate Derived classes & Inheritance:" code={code15} output={output15} />
-                <CodeBlock title="AIM-16: Write a Program to insert and delete and element from the Stack:" code={code16} output={output16} />
-                <CodeBlock title="AIM-17: Write a Program to insert and delete and element from the Queue:" code={code17} output={output17} />
-                <CodeBlock title="AIM-18: Write a Program to insert and delete and element from the Linked List:" code={code18} output={output18} />
-                <CodeBlock title="AIM-19: Write a Program to implement virtual function:" code={code19} output={output19} />
-                <CodeBlock title="AIM-20: Write a Program to implement friend function:" code={code20} output={output20} />
+                <CodeBlock title="IIS CODE COMING SOON! WITH EXPLANATION!" code={code8} output={output8} />
             </div>
 
 

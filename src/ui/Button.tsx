@@ -9,7 +9,7 @@ const variantStyle = {
 }
 
 
-const defaultStyles = "flex items-center px-1 py-1 rounded-md cursor-pointer transition-all duration-500 hover:-translate-y-2";
+const defaultStyles = "flex cursor-pointer items-center px-1 py-1 rounded-md cursor-pointer transition-all duration-500 hover:-translate-y-1";
 
 export const Button = ({variant , text , startIcon , endIcon , onClick}: {
     variant: "primary" | "secondary" | "other" | "notAllowed" | "admin";

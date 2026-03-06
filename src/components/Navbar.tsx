@@ -1,6 +1,7 @@
 import { Github } from "../icons/Github"
 import { Instagram } from "../icons/Instagram"
 import { Redirect } from "../icons/Redirect"
+import { XTwitter } from "../icons/XTwitter"
 import { Button } from "../ui/Button"
 
 export const Navbar = () => {
@@ -12,12 +13,15 @@ export const Navbar = () => {
                     </div>
 
                     <div className="flex justify-center md:mt-0 mt-4 items-center gap-4">
-                        <Button text="Made By Shubh" variant="primary" endIcon={<Redirect/>} onClick={() => {window.open("https://github.com/Shubhashish-Chakraborty/bce-codes")}}/>
+                        <Button text="Codebase" variant="primary" endIcon={<Redirect/>} onClick={() => {window.open("https://github.com/Shubhashish-Chakraborty/iis-code")}}/>
                         <div onClick={() => {window.open("https://github.com/Shubhashish-Chakraborty")}} className="hover:scale-110 cursor-pointer transition-all duration-300">
                             <Github/>
                         </div>
                         <div onClick={() => {window.open("https://www.instagram.com/___shubhashish___")}} className="hover:scale-110 cursor-pointer transition-all duration-300">
                             <Instagram/>
+                        </div>
+                        <div onClick={() => {window.open("https://x.com/__Shubhashish__")}} className="hover:scale-110 cursor-pointer transition-all duration-300">
+                            <XTwitter/>
                         </div>
                     </div>
                 </div>
