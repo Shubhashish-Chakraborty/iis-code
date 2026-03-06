@@ -18,7 +18,10 @@ export default function App() {
                     <Capsule
                         text="Watch Detailed Explanation on My Youtube"
                         variant="cap1"
-                        onClick={() => { window.alert("UPLOADING SOON!"); }}
+                        onClick={() => {
+                            window.alert("UPLOADING SOON!");
+                            window.open("https://www.youtube.com/@shubhdevs/playlists")
+                        }}
                         startIcon={<File />}
                     />
                     <Capsule
