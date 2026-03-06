@@ -1,4 +1,3 @@
-
 import { output1, output2, output3, output4, output5, output6 } from "./CodeOutputs";
 import { Capsule } from "./components/Capsule";
 import CodeBlock from "./components/CodeBlock";
@@ -7,6 +6,9 @@ import { Navbar } from "./components/Navbar";
 import { Code } from "./icons/Code";
 import { File } from "./icons/File";
 import { code1, code2, code3, code4, code5, code6 } from "./PracticalCodes";
+
+// 1. We import the new Scroll to Top component right here!
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
     return (
@@ -41,12 +43,14 @@ export default function App() {
                 <CodeBlock title="Stay Tuned!" code={code6} output={output6} />
             </div>
 
-
-            <div className="text-center">
+            <div className="text-center pb-20"> {/* Added a little padding-bottom (pb-20) here so the button doesn't cover the text! */}
                 <h1 className="text-white text-3xl md:text-6xl lg:text-5xl font-bold tracking-tight max-w-4xl mx-auto leading-tight">
                     <span className="bg-gradient-to-r from-emerald-400 via-orange-600 to-blue-400 bg-clip-text text-transparent cursor-pointer">All the best! Regards, Shubhashish ;)</span>
                 </h1>
             </div>
+            
+            {/* 2. And we deploy it right here at the very end of the app! */}
+            <ScrollToTop />
         </div>
     )
 }
