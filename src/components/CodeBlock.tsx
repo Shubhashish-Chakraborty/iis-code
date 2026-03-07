@@ -4,9 +4,10 @@ interface CodeBlockProps {
   title: string;
   code: string;
   output?: string;
+  videoUrl?: string;
 }
 
-const CodeBlock: React.FC<CodeBlockProps> = ({ title, code, output }) => {
+const CodeBlock: React.FC<CodeBlockProps> = ({ title, code, output, videoUrl }) => {
   const [isCopied, setIsCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -18,6 +19,12 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ title, code, output }) => {
       console.error("Failed to copy code:", error);
     }
   };
+  
+  const handleWatchVideo = () => {
+    if (videoUrl) {
+      window.open(videoUrl, "_blank");
+    }
+  };
 
   return (
     <div className="my-4 sm:my-6 mb-6 sm:mb-10 rounded-lg overflow-hidden cursor-pointer shadow-lg shadow-blue-200 hover:shadow-2xl hover:shadow-purple-500 transition-all duration-500 bg-gray-800 font-bold text-gray-100 max-w-4xl mx-auto">
@@ -27,7 +34,15 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ title, code, output }) => {
       {/* Code Container */}
       <div className="relative">
         {/* Header with copy button */}
-        <div className="flex justify-end px-3 sm:px-4 py-2 bg-codeblock1">
+        <div className="flex justify-end px-3 sm:px-4 gap-x-6 py-2 bg-codeblock1">
+          {videoUrl && (
+            <button
+              onClick={handleWatchVideo}
+              className="cursor-pointer hover:scale-105 transition-all duration-300 bg-red-700 px-3 py-1 font-bold rounded-3xl"
+            >
+              Watch Explanation
+            </button>
+          )}
           <button
             onClick={handleCopy}
             className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-300 cursor-pointer hover:text-green-400 transition-colors"

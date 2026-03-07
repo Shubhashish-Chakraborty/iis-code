@@ -20,8 +20,7 @@ export default function App() {
                             text="Watch Detailed Explanation on My Youtube"
                             variant="cap1"
                             onClick={() => {
-                                window.alert("UPLOADING SOON!");
-                                window.open("https://www.youtube.com/@shubhdevs/playlists")
+                                window.open("https://www.youtube.com/playlist?list=PLsWLOBFxUwM6d-4WDSW93KCLv08Ofi68H")
                             }}
                             startIcon={<File />}
                         />
@@ -40,7 +39,7 @@ export default function App() {
             <Intro />
 
             <div>
-                <CodeBlock title="1. Caesar Cipher Algorithm" code={code1} output={output1} />
+                <CodeBlock title="1. Caesar Cipher Algorithm" code={code1} output={output1} videoUrl="https://youtu.be/Y_xX7AefJ44" />
                 <CodeBlock title="2. Playfair Cipher Algorithm" code={code2} output={output2} />
                 <CodeBlock title="3. Hill Cipher Algorithm" code={code3} output={output3} />
                 <CodeBlock title="4. RSA Cipher Algorithm" code={code4} output={output4} />
