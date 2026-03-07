@@ -14,22 +14,26 @@ export default function App() {
             <Navbar />
 
             <div className="sticky mt-10 md:mt-0 top-0 z-10 bg-black/10 backdrop-blur-md py-1 shadow-md">
-                <div className="mt-2 mb-4 gap-x-4 flex justify-center">
-                    <Capsule
-                        text="Watch Detailed Explanation on My Youtube"
-                        variant="cap1"
-                        onClick={() => {
-                            window.alert("UPLOADING SOON!");
-                            window.open("https://www.youtube.com/@shubhdevs/playlists")
-                        }}
-                        startIcon={<File />}
-                    />
-                    <Capsule
-                        text="Try out Python Code"
-                        variant="cap2"
-                        onClick={() => { window.open("https://www.programiz.com/python-programming/online-compiler"); }}
-                        startIcon={<Code />}
-                    />
+                <div className="mt-2 mb-4 gap-3 flex justify-center flex-col md:flex-row items-center">
+                    <div>
+                        <Capsule
+                            text="Watch Detailed Explanation on My Youtube"
+                            variant="cap1"
+                            onClick={() => {
+                                window.alert("UPLOADING SOON!");
+                                window.open("https://www.youtube.com/@shubhdevs/playlists")
+                            }}
+                            startIcon={<File />}
+                        />
+                    </div>
+                    <div>
+                        <Capsule
+                            text="Try out Python Code"
+                            variant="cap2"
+                            onClick={() => { window.open("https://www.programiz.com/python-programming/online-compiler"); }}
+                            startIcon={<Code />}
+                        />
+                    </div>
                 </div>
             </div>
 

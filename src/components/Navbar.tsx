@@ -13,7 +13,9 @@ export const Navbar = () => {
                     </div>
 
                     <div className="flex justify-center md:mt-0 mt-4 items-center gap-4">
-                        <Button text="Codebase" variant="primary" endIcon={<Redirect/>} onClick={() => {window.open("https://github.com/Shubhashish-Chakraborty/iis-code")}}/>
+                        <div className="md:block hidden">
+                            <Button text="Codebase" variant="primary" endIcon={<Redirect/>} onClick={() => {window.open("https://github.com/Shubhashish-Chakraborty/iis-code")}}/>
+                        </div>
                         <div onClick={() => {window.open("https://github.com/Shubhashish-Chakraborty")}} className="hover:scale-110 cursor-pointer transition-all duration-300">
                             <Github/>
                         </div>
