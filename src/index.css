@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 @theme {
     --color-BgCap1: #11071a;
     --color-BgCap2: #19050f;
@@ -7,4 +6,26 @@
     --color-TextCap2: #f49fce;
     --color-codeblock1: #2f2f2f;
     --color-codeblock2: #1c2120;
+}
+
+/* for the side navigation */
+.scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgba(16, 185, 129, 0.5);
+    border-radius: 20px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: rgba(16, 185, 129, 0.8);
+}
+
+html {
+    scroll-behavior: smooth;
 }
