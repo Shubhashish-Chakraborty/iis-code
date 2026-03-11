@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 
 interface CodeBlockProps {
+  id: number;
   title: string;
   code: string;
   output?: string;
   videoUrl?: string;
 }
 
-const CodeBlock: React.FC<CodeBlockProps> = ({ title, code, output, videoUrl }) => {
+const CodeBlock: React.FC<CodeBlockProps> = ({ id, title, code, output, videoUrl }) => {
   const [isCopied, setIsCopied] = useState(false);
 
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(code);
       setIsCopied(true);
-      setTimeout(() => setIsCopied(false), 2000); // Reseting after 2 seconds
+      setTimeout(() => setIsCopied(false), 2000);
     } catch (error) {
       console.error("Failed to copy code:", error);
     }
@@ -27,7 +28,10 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ title, code, output, videoUrl }) 
   };
 
   return (
-    <div className="my-4 sm:my-6 mb-6 sm:mb-10 rounded-lg overflow-hidden cursor-pointer shadow-lg shadow-blue-200 hover:shadow-2xl hover:shadow-purple-500 transition-all duration-500 bg-gray-800 font-bold text-gray-100 max-w-4xl mx-auto">
+    <div 
+      id={`section-${id}`}
+      className="my-4 sm:my-6 mb-6 sm:mb-10 rounded-lg overflow-hidden cursor-pointer shadow-lg shadow-blue-200 hover:shadow-2xl hover:shadow-purple-500 transition-all duration-500 bg-gray-800 font-bold text-gray-100 max-w-4xl mx-auto scroll-mt-24" // Add scroll-mt-24 for offset
+    >
       {/* Title */}
       <h3 className="px-3 sm:px-4 py-2 bg-codeblock1 text-base sm:text-lg text-center font-semibold break-words">{title}</h3>
 
