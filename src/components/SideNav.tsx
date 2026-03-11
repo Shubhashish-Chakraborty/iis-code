@@ -15,7 +15,7 @@ export const SideNav: React.FC<SideNavProps> = ({ items }) => {
     // This ref prevents the observer from updating the active state 
     // while the user is actively clicking and smooth-scrolling.
     const isScrollingRef = useRef(false);
-    const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const scrollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     useEffect(() => {
         const observerOptions = {
