@@ -165,7 +165,7 @@ e = 7
 
 d = mod_inverse(e, phi)
 
-msg = int(input("Enter message (number): "))
+msg = int(input("Enter message (number (0-32) ): "))
 
 cipher = (msg ** e) % n
 print("Encrypted message:", cipher)

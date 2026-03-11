@@ -21,9 +21,9 @@ Encrypted message: AVACACVEVQSSLCWX
 
 export const output4 =
 `
-Enter message (number): 356
-Encrypted message: 5
-Decrypted message: 26
+Enter message (number (0-32) ): 12
+Encrypted message: 12
+Decrypted message: 12
 `
 
 export const output5 =
